@@ -1,12 +1,12 @@
 # **************************************************************************** #
 #                                                                              #
 #                                                         :::      ::::::::    #
-#    makefile                                           :+:      :+:    :+:    #
+#    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
 #    By: junykim <junykim@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/02/08 14:07:08 by junykim           #+#    #+#              #
-#    Updated: 2023/02/08 14:08:18 by junykim          ###   ########.fr        #
+#    Updated: 2023/02/08 14:53:31 by junykim          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,9 +17,8 @@ CXXFLAGS	= -Wall -Wextra -Werror -std=c++98
 DEL			= rm -rf
 
 # srcs
-SRCS = newZombie.cpp \
-main.cpp \
-randomChump.cpp \
+SRCS = main.cpp \
+zombieHorde.cpp \
 Zombie.cpp
 OBJS = $(SRCS:.cpp=.o)
 
