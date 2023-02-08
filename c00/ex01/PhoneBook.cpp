@@ -3,14 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   PhoneBook.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: junykim <junykim@student.42seoul.kr>       +#+  +:+       +#+        */
+/*   By: junykim <junykim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/17 19:36:56 by junykim           #+#    #+#             */
-/*   Updated: 2023/01/18 12:34:43 by junykim          ###   ########.fr       */
+/*   Updated: 2023/02/08 13:46:11 by junykim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
 #include "PhoneBook.hpp"
 /**
  * ADD : 새로운 연락처를 저장한다.
@@ -21,60 +20,108 @@
  * - 위의 정보를 보여준 다음, 사용자에게 인덱스를 다시 입력받는다. 인덱스가 범위를 벗어나거나 잘못된 경우 관련된 동작을 적절하게 정의한다. 제대로 입력받은 경우 연락처 정보를 한 줄에 하나씩 표시한다.
  * EXIT : 프로그램이 종료되고 연락처가 소실됨.
  */
-
-void	Contact::SearchContact()
+PhoneBook::PhoneBook()
 {
-
-	//10자 초과면 자름 -> 표시가능 문자 .로 대체
-	//정보 출력 -> 인덱스 입력 받기i 
-}
-int	main(void)
-{
-	std::string	cmd;
-
-	//전화번호부 비우기
-	while (true)
-	{
-		std::cout << "enter command : (ADD, SEARCH, EXIT)" << std::endl;
-		std::cin >> cmd;
-		if (cmd == "ADD")
-		{
-			AddContact();
-		}
-		else if (cmd == "SEARCH")
-		{
-			
-		}
-		else if (cmd == "EXIT")
-		{
-			break ;
-		}
-		else
-		{
-			std::cout << "command not found" << std::endl;
-		}
-	}
-	return (0);
+	index = 0;
 }
 
-void	Contact::AddContact(void)
+int PhoneBook::getIndex(void) const
 {
-	//아무 값이 안 들어오면 저장을 하지 않고 오류 출력 
-	std::cout << "first name :" << std::endl;
-	std::cin >> this->f_name;
-	std::cout << "last name :" << std::endl;
-	std::cin >> this->l_name;
-	std::cout << "nickname :" << std::endl;
-	std::cin >> this->n_name;
-	std::cout << "phone number :" << std::endl;
-	std::cin >> this->p_number;
-	std::cout << "darkest secret :" << std::endl;
-	std::cin >> this->secret;
-	std::cout << "Save Contact." << std::endl;
+	return (this->index);
 }
 
-void	PhoneBook::AddContact(void)
+void PhoneBook::setIndex(int Index)
 {
-	this->contacts[index % 8].AddContact();
-	this->index++;
+	this->index = Index;
+}
+
+void	printTable(std::string str)
+{
+	int len;
+	
+    len = str.size();
+    if (len <= 10)
+    {
+        std::cout << std::setw(10);
+        std::cout << str;
+        std::cout << '|';
+    }
+    else
+    {
+        std::cout << std::setw(9);
+        std::cout << str.substr(0, 9);
+        std::cout << '.';
+        std::cout << '|';
+    }
+}
+
+void    setContact(std::string &_name)
+{
+    while (getline(std::cin, _name))
+    {
+        if (!_name.empty() && !std::cin.eof())
+        {
+            return ;
+        }
+    }
+    std::cout << "EOF\n";
+    exit(0);
+}
+
+void PhoneBook::addTable(void)
+{
+    Contact     temp;
+    std::string firstName;
+    std::string lastName;
+    std::string nickName;
+    std::string phoneNumber;
+    std::string darkestSecret;
+
+    std::cin.ignore(); // getline 쓰면 무조건 써줘야하는  건가?
+    std::cout << "Input First Name : ";
+    setContact(firstName);
+    temp.setFirstName(firstName);
+    std::cout << "Input Last Name : ";
+    setContact(lastName);
+    temp.setLastName(lastName);
+    std::cout << "Input NickName : ";
+    setContact(nickName);
+    temp.setNickName(nickName);
+    std::cout << "Input phoneNumber Name : ";
+    setContact(phoneNumber);
+    temp.setPhoneNumber(phoneNumber);
+    std::cout << "Input Secret : ";
+    setContact(darkestSecret);
+    temp.setDarkestSecret(darkestSecret);
+    
+    this->contacts[getIndex() % 8] = temp;
+	setIndex(getIndex() + 1);
+}
+
+void PhoneBook::showAllTable()
+{
+    printTable("Index");
+    printTable("First Name");
+    printTable("Last Name");
+    printTable("NickName");
+    std::cout << '\n';
+    if (getIndex() > 8)
+        setIndex(8);
+    for (int i = 0; i < getIndex(); i++)
+    {
+        printTable(std::to_string(i + 1));
+        printTable(this->contacts[i].getLastName());
+        printTable(this->contacts[i].getNickName());
+        printTable(this->contacts[i].getPhoneNumber());
+        std::cout << '\n';
+    }
+}
+
+void PhoneBook::searchResult(int index)
+{
+    printTable(this->contacts[index - 1].getFirstName());
+    printTable(this->contacts[index - 1].getLastName());
+    printTable(this->contacts[index - 1].getNickName());
+    printTable(this->contacts[index - 1].getPhoneNumber());
+    printTable(this->contacts[index - 1].getDarkestSecret());
 }

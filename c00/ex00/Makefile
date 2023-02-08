@@ -11,14 +11,26 @@
 # **************************************************************************** #
 
 #Variable
-NAME	= megaphone
-CC		= c++
-CFLAGS	= -Wall -Wextra -Werror -std=c++98
+NAME		= megaphone
+CXX			= c++
+CXXFLAGS	= -Wall -Wextra -Werror -std=c++98
+DEL			= rm -rf
 
 # srcs
+SRCS = megaphone.cpp
+OBJS = $(SRCS:.cpp=.o)
 
 # rules
 all : $(NAME)
 
-.PHONY : all re fclean clean
+$(NAME) : 
+	$(CXX) $(CXXFLAGS) -o $(NAME) $(OBJS)
+clean : 
+	$(DEL) $(OBJS)
 
+fclean : clean
+	$(DEL) $(NAME)
+
+re : fclean all
+
+.PHONY : all re fclean clean

@@ -1,32 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   PhoneBook.hpp                                      :+:      :+:    :+:   */
+/*   Zombie.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: junykim <junykim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/17 19:30:56 by junykim           #+#    #+#             */
-/*   Updated: 2023/02/08 13:42:56 by junykim          ###   ########.fr       */
+/*   Created: 2023/02/08 14:16:35 by junykim           #+#    #+#             */
+/*   Updated: 2023/02/08 14:22:00 by junykim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PHONEBOOK_HPP
-#define PHONEBOOK_HPP
+#ifndef ZOMBIE_HPP
+#define ZOMBIE_HPP
 
-#include "Contact.hpp"
+#include <iostream>
+#include <string>
 
-class PhoneBook {
-private:
-  Contact contacts[8];
-  int index;
+class Zombie
+{
+	std::string	name;
 
 public:
-	PhoneBook();
-  void addTable(void);
-  void showAllTable(void);
-  void searchResult(int index);
-  void	setIndex(int index);
-  int	getIndex(void) const;
+	Zombie(std::string name);
+	void	announce();
+	~Zombie();
 };
+
+Zombie *newZombie(std::string name);
+void    randomChump(std::string name);
 
 #endif

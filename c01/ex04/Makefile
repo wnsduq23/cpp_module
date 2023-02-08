@@ -1,23 +1,26 @@
 # **************************************************************************** #
 #                                                                              #
 #                                                         :::      ::::::::    #
-#    Makefile                                           :+:      :+:    :+:    #
+#    makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
 #    By: junykim <junykim@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2023/02/07 15:34:57 by junykim           #+#    #+#              #
-#    Updated: 2023/02/08 13:51:47 by junykim          ###   ########.fr        #
+#    Created: 2023/02/08 14:07:08 by junykim           #+#    #+#              #
+#    Updated: 2023/02/08 14:08:18 by junykim          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 #Variable
-NAME		= phoneBook
+NAME		= BraiiiiiiinnnzzzZ
 CXX			= c++
 CXXFLAGS	= -Wall -Wextra -Werror -std=c++98
 DEL			= rm -rf
 
 # srcs
-SRCS = Contact.cpp main.cpp PhoneBook.cpp
+SRCS = newZombie.cpp \
+main.cpp \
+randomChump.cpp \
+Zombie.cpp
 OBJS = $(SRCS:.cpp=.o)
 
 # rules
