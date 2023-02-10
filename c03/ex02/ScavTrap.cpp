@@ -1,15 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   FragTrap.cpp                                       :+:      :+:    :+:   */
+/*   ScavTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: junykim <junykim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/10 17:44:58 by junykim           #+#    #+#             */
-/*   Updated: 2023/02/10 17:47:47 by junykim          ###   ########.fr       */
+/*   Created: 2023/02/10 17:03:00 by junykim           #+#    #+#             */
+/*   Updated: 2023/02/10 17:30:50 by junykim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ClapTrap.hpp"
 #include "ScavTrap.hpp"
-#include "FragTrap.hpp"
+#include "ClapTrap.hpp"
+
+ScavTrap::ScavTrap() : ClapTrap()
+{
+	
+}

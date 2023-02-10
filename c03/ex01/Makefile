@@ -6,12 +6,12 @@
 #    By: junykim <junykim@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/02/08 14:07:08 by junykim           #+#    #+#              #
-#    Updated: 2023/02/10 17:04:23 by junykim          ###   ########.fr        #
+#    Updated: 2023/02/10 17:46:13 by junykim          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 #Variable
-NAME		= ClapTrap
+NAME		= ScavTrap
 CXX			= c++
 CXXFLAGS	= -Wall -Wextra -Werror -std=c++98
 DEL			= rm -rf
