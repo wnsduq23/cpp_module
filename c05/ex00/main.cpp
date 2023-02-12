@@ -6,7 +6,7 @@
 /*   By: junykim <junykim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/11 10:55:39 by junykim           #+#    #+#             */
-/*   Updated: 2023/02/11 12:25:03 by junykim          ###   ########.fr       */
+/*   Updated: 2023/02/12 15:30:37 by junykim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,12 @@
 
 int main()
 {
-	Bureaucrat first("KIM");
-	Bureaucrat second("LEE");
+	Bureaucrat first("KIM", 20);
+	Bureaucrat second("LEE", 71);
+
+	std::cout << "=== first init Bureaucrat === " << std::endl;
+	std::cout << first << '\n';
+	std::cout << second << '\n';
 
 	std::cout << "=== Wrong Bureaucrat ===" << std::endl;
 
@@ -64,7 +68,7 @@ int main()
 	std::cout << "\n=== Test Member ===" << std::endl;
 	try
 	{
-		first.increment();
+		first.incrementGrade();
 		std::cout << first << std::endl;
 		// first.increment();
 		// std::cout << first << std::endl;
