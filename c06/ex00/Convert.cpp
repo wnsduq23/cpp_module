@@ -1,32 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   iter.hpp                                           :+:      :+:    :+:   */
+/*   Convert.cpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: junykim <junykim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/11 12:51:19 by junykim           #+#    #+#             */
-/*   Updated: 2023/02/11 12:52:58 by junykim          ###   ########.fr       */
+/*   Created: 2023/02/12 14:02:14 by junykim           #+#    #+#             */
+/*   Updated: 2023/02/12 14:09:44 by junykim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-template<typename T>
-void iter(T *array, size_t length, void (*fn)(T&))
-{
-    for (size_t i = 0; i < length; i++)
-    {
-        fn(array[i]);
-    }
-}   
+#include "Convert.hpp"
 
-template<typename T>
-void print(T &str)
+Convert::Convert()
 {
-    std::cout << str << " ";
+
 }
 
-template<typename T>
-void sqrt(T &num)
+void    Convert::setValue(std::string s)
 {
-    num = num * num;
+    std::string::size_type n;
+    std::string::size_type f;
+
+    try
+    {
+        this->value = s;
+    }
+    catch(const std::exception& e)
+    {
+        std::cerr << e.what() << '\n';
+    }
+    n = s.find(.);
 }

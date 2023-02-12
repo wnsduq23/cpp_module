@@ -6,12 +6,14 @@
 /*   By: junykim <junykim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/11 12:46:17 by junykim           #+#    #+#             */
-/*   Updated: 2023/02/11 12:49:01 by junykim          ###   ########.fr       */
+/*   Updated: 2023/02/12 13:26:21 by junykim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef WHATEVER_HPP
 #define WHATEVER_HPP
+
+#include <iostream>
 
 template<typename T>
 void swap(T &a, T &b)
