@@ -6,18 +6,21 @@
 #    By: junykim <junykim@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/02/08 14:07:08 by junykim           #+#    #+#              #
-#    Updated: 2023/02/08 14:52:41 by junykim          ###   ########.fr        #
+#    Updated: 2023/02/13 13:02:43 by junykim          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 #Variable
-NAME		= BraiiiiiiinnnzzzZ
+NAME		= Animal
 CXX			= c++
 CXXFLAGS	= -Wall -Wextra -Werror -std=c++98
 DEL			= rm -rf
 
 # srcs
-SRCS = main.cpp Weapon.cpp HumanA.cpp HumanB.cpp
+SRCS = 
+main.cpp Dog.cpp Cat.cpp Dog.hpp Cat.hpp WrongCat.cpp \
+WrongCat.hpp Animal.cpp Animal.hpp WrongAnimal.cpp WrongAnimal.hpp \
+Brain.cpp
 OBJS = $(SRCS:.cpp=.o)
 
 # rules
