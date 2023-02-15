@@ -6,7 +6,7 @@
 /*   By: junykim <junykim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/17 19:36:56 by junykim           #+#    #+#             */
-/*   Updated: 2023/02/08 13:46:11 by junykim          ###   ########.fr       */
+/*   Updated: 2023/02/15 15:12:26 by junykim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,7 +77,7 @@ void PhoneBook::addTable(void)
     std::string phoneNumber;
     std::string darkestSecret;
 
-    std::cin.ignore(); // getline 쓰면 무조건 써줘야하는  건가?
+    std::cin.ignore();
     std::cout << "Input First Name : ";
     setContact(firstName);
     temp.setFirstName(firstName);
@@ -94,20 +94,23 @@ void PhoneBook::addTable(void)
     setContact(darkestSecret);
     temp.setDarkestSecret(darkestSecret);
     
-    this->contacts[getIndex() % 8] = temp;
+    this->contacts[getIndex() % MAX_IDX] = temp;
 	setIndex(getIndex() + 1);
 }
 
 void PhoneBook::showAllTable()
 {
+	int idx;
+
     printTable("Index");
     printTable("First Name");
     printTable("Last Name");
     printTable("NickName");
     std::cout << '\n';
-    if (getIndex() > 8)
-        setIndex(8);
-    for (int i = 0; i < getIndex(); i++)
+	idx = getIndex();
+    if (getIndex() > MAX_IDX)
+        idx = MAX_IDX;
+    for (int i = 0; i < idx; i++)
     {
         printTable(std::to_string(i + 1));
         printTable(this->contacts[i].getLastName());

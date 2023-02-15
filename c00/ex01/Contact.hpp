@@ -6,7 +6,7 @@
 /*   By: junykim <junykim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/07 15:50:11 by junykim           #+#    #+#             */
-/*   Updated: 2023/02/15 13:01:12 by junykim          ###   ########.fr       */
+/*   Updated: 2023/02/15 15:05:49 by junykim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ class Contact
           std::string getDarkestSecret() const;
 
           void setFirstName(std::string firstName);
-          void setLastName(std::string lasttName);
+          void setLastName(std::string lastName);
           void setNickName(std::string nickName);
           void setPhoneNumber(std::string phoneNumber);
           void setDarkestSecret(std::string darkestSecret);

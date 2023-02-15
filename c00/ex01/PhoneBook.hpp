@@ -6,7 +6,7 @@
 /*   By: junykim <junykim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/17 19:30:56 by junykim           #+#    #+#             */
-/*   Updated: 2023/02/15 12:37:03 by junykim          ###   ########.fr       */
+/*   Updated: 2023/02/15 15:12:04 by junykim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,11 @@
 
 #include "Contact.hpp"
 
+#define MAX_IDX (8)
+
 class PhoneBook {
 private:
-  Contact contacts[8];
+  Contact contacts[MAX_IDX];
   int index;
 
 public:
