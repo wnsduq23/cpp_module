@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: junykim <junykim@student.42seoul.kr>       +#+  +:+       +#+         #
+#    By: junykim <junykim@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/15 11:28:15 by junykim           #+#    #+#              #
-#    Updated: 2023/01/18 12:13:24 by junykim          ###   ########.fr        #
+#    Updated: 2023/02/15 11:26:28 by junykim          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,8 +23,9 @@ OBJS = $(SRCS:.cpp=.o)
 # rules
 all : $(NAME)
 
-$(NAME) : 
+$(NAME) : $(OBJS)
 	$(CXX) $(CXXFLAGS) -o $(NAME) $(OBJS)
+
 clean : 
 	$(DEL) $(OBJS)
 

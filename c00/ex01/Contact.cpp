@@ -6,12 +6,11 @@
 /*   By: junykim <junykim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/07 15:32:39 by junykim           #+#    #+#             */
-/*   Updated: 2023/02/08 13:05:56 by junykim          ###   ########.fr       */
+/*   Updated: 2023/02/15 12:15:57 by junykim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Contact.hpp"
-
 
 void    Contact::setFirstName(std::string firstName)
 {
