@@ -6,18 +6,18 @@
 #    By: junykim <junykim@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/02/08 14:07:08 by junykim           #+#    #+#              #
-#    Updated: 2023/02/10 13:12:04 by junykim          ###   ########.fr        #
+#    Updated: 2023/02/20 21:30:40 by junykim          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 #Variable
-NAME		= main
+NAME		= Replace
 CXX			= c++
 CXXFLAGS	= -Wall -Wextra -Werror -std=c++98
 DEL			= rm -rf
 
 # srcs
-SRCS = main.cpp
+SRCS = main.cpp Replace.cpp
 OBJS = $(SRCS:.cpp=.o)
 
 # rules

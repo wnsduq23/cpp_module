@@ -6,7 +6,7 @@
 /*   By: junykim <junykim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/09 17:11:10 by junykim           #+#    #+#             */
-/*   Updated: 2023/02/13 15:03:43 by junykim          ###   ########.fr       */
+/*   Updated: 2023/02/20 22:30:48 by junykim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ void	Harl::harlFilter(int idx)
 	switch (idx)
 	{
 		case 0:
-		this->debug();
+			this->debug();
 		case 1:
 			this->info();
 		case 2:

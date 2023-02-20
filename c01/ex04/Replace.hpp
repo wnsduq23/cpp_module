@@ -1,28 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Weapon.cpp                                         :+:      :+:    :+:   */
+/*   Replace.hpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: junykim <junykim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/09 17:10:52 by junykim           #+#    #+#             */
-/*   Updated: 2023/02/20 21:08:50 by junykim          ###   ########.fr       */
+/*   Created: 2023/02/20 21:31:38 by junykim           #+#    #+#             */
+/*   Updated: 2023/02/20 21:59:29 by junykim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Weapon.hpp"
+#ifndef REPLACE_HPP
+#define REPLACE_HPP
 
-Weapon::Weapon(std::string _type)
-{
-	this->type = _type;
-}
+#include <iostream>
 
-std::string const &Weapon::getType()
+class Replace
 {
-    return (this->type);
-}
+	private:
 
-void    Weapon::setType(std::string _type)
-{
-    this->type = _type;
-}
+	public:
+		Replace();
+		~Replace();
+};
+
+#endif
