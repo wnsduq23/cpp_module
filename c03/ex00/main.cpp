@@ -6,7 +6,7 @@
 /*   By: junykim <junykim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/10 16:09:18 by junykim           #+#    #+#             */
-/*   Updated: 2023/02/10 17:03:14 by junykim          ###   ########.fr       */
+/*   Updated: 2023/02/21 16:06:51 by junykim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,24 +15,31 @@
 int main()
 {
 	ClapTrap kim("KIM");
+	kim.setAttackDamage(4);
 	ClapTrap lee("LEE");
+	lee.setAttackDamage(2);
+
+	std::cout << "\n===============================\n";
 
 	kim.attack("LEE");
-	lee.takeDamage(5);
+	lee.takeDamage(kim.getAttackDamage());
 	
 	std::cout << "\n===============================\n";
 
 	lee.attack("KIM");
-	kim.takeDamage(8);
+	kim.takeDamage(lee.getAttackDamage());
 	kim.beRepaired(3);
-	kim.beRepaired(3);
+	lee.beRepaired(3);
 
 	std::cout << "\n===============================\n";
 
 	kim.attack("LEE");
-	lee.takeDamage(2);
-	lee.takeDamage(2);
-	lee.takeDamage(2);
-	lee.takeDamage(2);
-	lee.beRepaired(3);
+	lee.takeDamage(kim.getAttackDamage());
+	kim.attack("LEE");
+	lee.takeDamage(kim.getAttackDamage());
+	kim.attack("LEE");
+	lee.takeDamage(kim.getAttackDamage());
+
+
+	return (0);
 }
