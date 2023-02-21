@@ -1,34 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: junykim <junykim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/10 17:04:48 by junykim           #+#    #+#             */
-/*   Updated: 2023/02/21 15:33:52 by junykim          ###   ########.fr       */
+/*   Created: 2023/02/21 16:52:44 by junykim           #+#    #+#             */
+/*   Updated: 2023/02/21 17:34:48 by junykim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SCAVTRAP_HPP
-#define SCAVTRAP_HPP
-
 #include "ClapTrap.hpp"
+#include "ScavTrap.hpp"
+#include "FragTrap.hpp"
 
-class ScavTrap : public ClapTrap 
+int main()
 {
-    public:
-        ScavTrap();
-        ScavTrap(std::string _name);
-        ScavTrap(const ScavTrap& _rhs);
-        ~ScavTrap();
-        
-        ScavTrap& operator=(const ScavTrap& rhs);
+	ClapTrap a("A");
+	ScavTrap b("B");
 
-        void guardGate();
-        void attack(std::string const& _target);
+	FragTrap c("C");
+	FragTrap d("D");
 
-        void printStat();
-};
+	c.attack("D");
+	d.takeDamage(20);
+	d.beRepaired(10);
 
-#endif
+	d.attack("C");
+	c.takeDamage(20);
+	c.highFiveGuys();
+
+	d.attack("C");
+	c.takeDamage(70);
+	c.takeDamage(10);
+	c.attack("D");
+	c.beRepaired(10);
+	c.highFiveGuys();
+}
