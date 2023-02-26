@@ -6,7 +6,7 @@
 /*   By: junykim <junykim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/17 19:36:56 by junykim           #+#    #+#             */
-/*   Updated: 2023/02/15 15:12:26 by junykim          ###   ########.fr       */
+/*   Updated: 2023/02/26 17:49:57 by junykim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -122,9 +122,9 @@ void PhoneBook::showAllTable()
 
 void PhoneBook::searchResult(int index)
 {
-    printTable(this->contacts[index - 1].getFirstName());
-    printTable(this->contacts[index - 1].getLastName());
-    printTable(this->contacts[index - 1].getNickName());
-    printTable(this->contacts[index - 1].getPhoneNumber());
-    printTable(this->contacts[index - 1].getDarkestSecret());
+	std::cout << index << "'s firstname : " << this->contacts[index - 1].getFirstName() << '\n';
+	std::cout << index << "'s lastname : " << this->contacts[index - 1].getLastName() << '\n';
+	std::cout << index << "'s Nickname : " << this->contacts[index - 1].getNickName() << '\n';
+	std::cout << index << "'s Phone number : " << this->contacts[index - 1].getPhoneNumber() << '\n';
+	std::cout << index << "'s Secret : " << this->contacts[index - 1].getDarkestSecret() << '\n';
 }
