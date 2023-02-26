@@ -6,7 +6,7 @@
 /*   By: junykim <junykim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/10 18:49:43 by junykim           #+#    #+#             */
-/*   Updated: 2023/02/13 14:21:55 by junykim          ###   ########.fr       */
+/*   Updated: 2023/02/25 20:30:42 by junykim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ class Cat : public Animal
         Cat(const Cat& _rhs);
         Cat &operator=(const Cat& _rhs);
         void makeSound() const;
+
 		void		setIdea(std::string think, int idx);
 	    std::string	getIdea(int idx) const;
 };

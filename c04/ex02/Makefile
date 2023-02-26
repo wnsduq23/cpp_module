@@ -6,7 +6,7 @@
 #    By: junykim <junykim@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/02/08 14:07:08 by junykim           #+#    #+#              #
-#    Updated: 2023/02/13 13:02:43 by junykim          ###   ########.fr        #
+#    Updated: 2023/02/25 20:47:50 by junykim          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,10 +17,7 @@ CXXFLAGS	= -Wall -Wextra -Werror -std=c++98
 DEL			= rm -rf
 
 # srcs
-SRCS = 
-main.cpp Dog.cpp Cat.cpp Dog.hpp Cat.hpp WrongCat.cpp \
-WrongCat.hpp Animal.cpp Animal.hpp WrongAnimal.cpp WrongAnimal.hpp \
-Brain.cpp
+SRCS = main.cpp Dog.cpp Cat.cpp Animal.cpp Brain.cpp
 OBJS = $(SRCS:.cpp=.o)
 
 # rules

@@ -6,7 +6,7 @@
 /*   By: junykim <junykim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/10 18:48:44 by junykim           #+#    #+#             */
-/*   Updated: 2023/02/10 19:07:46 by junykim          ###   ########.fr       */
+/*   Updated: 2023/02/25 21:08:28 by junykim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ public:
   Animal(std::string _type);
   Animal(const Animal &_rhs);
   Animal &operator=(const Animal &_rhs);
-  virtual ~Animal();// 소멸자에도 virtual 넣어야하나요 ?
+  virtual ~Animal();
 
   virtual void makeSound() const;
   std::string getType() const;
