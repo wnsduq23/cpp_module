@@ -6,7 +6,7 @@
 /*   By: junykim <junykim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 14:11:05 by junykim           #+#    #+#             */
-/*   Updated: 2023/02/08 14:16:55 by junykim          ###   ########.fr       */
+/*   Updated: 2023/02/27 11:47:12 by junykim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ Zombie::Zombie(std::string naming)
 	name = naming;
 }
 
-Zombie::~Zombie()// 소멸자는 언제 실행되지 ? 
+Zombie::~Zombie()
 {
 	std::cout << name << " is died " << std::endl;
 }

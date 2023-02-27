@@ -6,7 +6,7 @@
 /*   By: junykim <junykim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/09 17:10:42 by junykim           #+#    #+#             */
-/*   Updated: 2023/02/20 21:13:05 by junykim          ###   ########.fr       */
+/*   Updated: 2023/02/27 11:48:54 by junykim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ HumanB::~HumanB()
     std::cout << "HumanB " << this->name << " is destroyed" << "\n";
 }
 
-void HumanB::setWeapon(Weapon &_weapon)//레퍼런스의 주소를 집어넣은거임??
+void HumanB::setWeapon(Weapon &_weapon)
 {
     this->weapon = &_weapon;
 }
