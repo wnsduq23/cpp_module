@@ -6,7 +6,7 @@
 /*   By: junykim <junykim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/20 21:31:18 by junykim           #+#    #+#             */
-/*   Updated: 2023/02/27 15:35:44 by junykim          ###   ########.fr       */
+/*   Updated: 2023/03/04 16:00:25 by junykim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ Replace::Replace()
 
 Replace::~Replace()
 {
-	std::cout << "Replace class is Destroyed\n";
+
 }
 
 Replace::Replace(char **argv)
@@ -64,24 +64,35 @@ void Replace::setReplaced(std::string _replaced)
 	this->replaced = _replaced;
 }
 
-int Replace::checkError(std::ifstream& infile, std::ofstream& _replaced)
+int Replace::checkInfileError(std::ifstream& infile)
 {
 	if (getToFind().empty() || getToFind() == "")
 	{
 		std::cout << "Invaild Argument\n";
 		return (1);
 	}
+
 	if (!infile.is_open())
 	{
 		std::cout << "Cannot open file \n";
 		return (1);
 	}
+	return (0);
+}
+
+int Replace::checkOutfileError(std::ofstream& _replaced)
+{
 	if (!_replaced.is_open())
 	{
-		infile.close();
 		std::cout << "replaceFile open fail\n";
 		return (1);
 	}
+    _replaced.seekp(0, std::ios::end);
+    if (_replaced.tellp() == 0) 
+	{
+       std::cout << "File is empty \n";
+       return (1);
+    }
 	return (0);
 }
 

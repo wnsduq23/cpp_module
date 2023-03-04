@@ -6,7 +6,7 @@
 /*   By: junykim <junykim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/20 21:31:38 by junykim           #+#    #+#             */
-/*   Updated: 2023/02/27 15:35:21 by junykim          ###   ########.fr       */
+/*   Updated: 2023/03/04 15:22:31 by junykim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,8 @@ class Replace
 		~Replace();
 		Replace(char **argv);
 
-		int checkError(std::ifstream& _infile, std::ofstream& _replaced);
+		int checkInfileError(std::ifstream& _infile);
+		int checkOutfileError(std::ofstream& _replaced);
 		void changeReplaceStr(std::ifstream& _infile, std::ofstream& _replaced);
 
 		void setFileName(std::string _file);
