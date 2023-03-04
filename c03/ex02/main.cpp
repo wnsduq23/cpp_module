@@ -6,7 +6,7 @@
 /*   By: junykim <junykim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/21 16:52:44 by junykim           #+#    #+#             */
-/*   Updated: 2023/02/21 17:34:48 by junykim          ###   ########.fr       */
+/*   Updated: 2023/03/04 21:01:30 by junykim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,9 +26,13 @@ int main()
 	d.takeDamage(20);
 	d.beRepaired(10);
 
+	std::cout << "==============================\n";
+
 	d.attack("C");
 	c.takeDamage(20);
 	c.highFiveGuys();
+
+	std::cout << "==============================\n";
 
 	d.attack("C");
 	c.takeDamage(70);
