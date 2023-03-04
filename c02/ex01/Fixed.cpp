@@ -6,7 +6,7 @@
 /*   By: junykim <junykim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/09 17:13:19 by junykim           #+#    #+#             */
-/*   Updated: 2023/02/10 15:06:47 by junykim          ###   ########.fr       */
+/*   Updated: 2023/03/04 20:03:54 by junykim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,7 @@ void Fixed::setRawBits(int const raw)
     this->fixed_point_number_value = raw;
 }
 
-float	Fixed::toFloat(void) const
+float Fixed::toFloat(void) const
 {
 	return ((float)this->fixed_point_number_value / (1 << this->fractional_bits)); 
 }
@@ -68,7 +68,8 @@ int	Fixed::toInt(void) const
 	return (this->fixed_point_number_value >> this->fractional_bits);
 }
 
-std::ostream &operator<<(std::ostream &out, const Fixed &fixed) {
+std::ostream &operator<<(std::ostream &out, const Fixed &fixed) 
+{
         out << fixed.toFloat();
         return (out);
 }
